@@ -13,7 +13,7 @@ app.listen(PORT, () => {
   console.log(`Server started on http://${HOST}:${PORT}`);
   conn.connect((err) => {
     if (err) {
-      throw new AppError(`Cannot connext to database ${err}`, 500);
+      throw new AppError(`Cannot connect to database ${err}`, 500);
     }
     console.log("Database Connected");
   });

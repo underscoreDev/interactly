@@ -14,7 +14,7 @@ export interface ContactsProps {
 export const createContact = async (req: Request, res: Response, next: NextFunction) => {
   const { first_name, last_name, email, mobile_number } = req.body;
 
-  const sql = "INSERT INTO contacts(first_name, last_name, email, mobile_number) VALUES (?,?,?,?)";
+  const sql = "INSERT INTO contacts (first_name, last_name, email, mobile_number) VALUES (?,?,?,?)";
 
   conn.query(sql, [first_name, last_name, email, mobile_number], (err, data) =>
     err
@@ -33,7 +33,7 @@ export const getAllContacts = async (_req: Request, res: Response, next: NextFun
   );
 };
 
-// Get All Contacts
+// Get one Contact
 export const getOneContacts = async (req: Request, res: Response, next: NextFunction) => {
   const { id } = req.params;
   const sql = "SELECT * FROM contacts WHERE id=?";
