@@ -3,6 +3,13 @@ import conn from "../database";
 import { Request, Response, NextFunction } from "express";
 import { AppError } from "../middlewares/handleAppError.middleware";
 
+export interface ContactsProps {
+  first_name: string;
+  last_name: string;
+  email: string;
+  mobile_number: string;
+}
+
 // CREATE CONTACT
 export const createContact = async (req: Request, res: Response, next: NextFunction) => {
   const { first_name, last_name, email, mobile_number } = req.body;
@@ -39,12 +46,12 @@ export const getOneContacts = async (req: Request, res: Response, next: NextFunc
 
 // UPDATE CONTACT
 export const updateContact = async (req: Request, res: Response, next: NextFunction) => {
-  const { first_name, last_name, email, mobile_number } = req.body;
+  const { email, mobile_number } = req.body;
   const { id } = req.params;
 
-  const sql = "UPDATE contacts SET first_name=?, last_name=?, email=?, mobile_number=? WHERE id=?";
+  const sql = "UPDATE contacts SET email=?, mobile_number=? WHERE id=?";
 
-  conn.query(sql, [first_name, last_name, email, mobile_number, id], (err, data) =>
+  conn.query(sql, [email, mobile_number, id], (err, data) =>
     err
       ? next(new AppError(`Cannot update contact ${err}`, 400))
       : res.status(200).json({ status: "success", message: "Contact updated Successfully" })
