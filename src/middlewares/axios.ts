@@ -1,19 +1,6 @@
-import { config } from "dotenv";
 import axios from "axios";
-
-export interface ContactsProps {
-  first_name: string;
-  last_name: string;
-  email: string;
-  mobile_number: string;
-}
-
-export interface UpdateContactsProps {
-  id: string;
-  email: string;
-  mobile_number: string;
-}
-
+import { config } from "dotenv";
+import { ContactsProps, UpdateContactsProps } from "../interface";
 config();
 
 export const AxiosInstance = axios.create({
@@ -26,7 +13,7 @@ export const AxiosClass = class {
   // get all contact
   getAllContacts = () =>
     AxiosInstance({
-      url: "/api/contacts/view/22002984351",
+      url: "/api/contacts/view",
       method: "get",
     });
 
