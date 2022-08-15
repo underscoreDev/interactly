@@ -5,7 +5,7 @@ import {
   createContact,
   updateContact,
   deleteContact,
-  getOneContacts,
+  getContact,
 } from "../controllers/contacts.controller";
 
 const contactsRouter = Router();
@@ -16,6 +16,6 @@ contactsRouter
   .route("/:id")
   .put(catchAsync(updateContact))
   .delete(catchAsync(deleteContact))
-  .get(catchAsync(getOneContacts));
+  .get(catchAsync(getContact));
 
 export default contactsRouter;
