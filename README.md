@@ -63,13 +63,16 @@ Next, start the Mysql server in your terminal:
 
 `mysql -u root -p`
 enter the password when it prompts for a password
-
-##### This will list out all the databases
+```bash
 
 show databases;
 
-# If "contacts" database is not present
+````
+##### This will list out all the databases
 
+
+# If "contacts" database is not present
+```bash
 create database contacts;
 
 ````
