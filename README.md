@@ -1,8 +1,8 @@
-# Storefront Backend Project
+# CONTACTS API INTERRACTLY Backend TASK
 
 # Project Title
 
-E-commerce backend API written in NodeJS-Typescript. This application has endpoints for Users, Products, and Orders.
+Contacts API. Interacly Backend developer task. Written in NodeJS-Typescript.
 
 ## Getting Started
 
@@ -12,16 +12,15 @@ purposes.
 ### Prerequisites
 
 - Node
-- Postgres
+- Mysql
 - DB-migrate
 
 ## Technologies used
 
-- Postgres for the database
+- Mysql for the database
 - Typescript/Node/Express for the application logic
 - dotenv from npm for managing environment variables
 - db-migrate from npm for migrations
-- jsonwebtoken from npm for working with JWTs
 - jasmine and supertest for unit/integration testing
 
 ### Clone the repo
@@ -45,35 +44,33 @@ purposes.
 First, create a `.env` file with all the required environment variables:
 
 ```bash
-ENV=dev
-POSTGRES_PORT=5432
+NODE_ENV=dev
 LOCAL_HOST_PORT=8989
 LOCAL_HOST=127.0.0.1
-POSTGRES_USER=postgres
-POSTGRES_DEV_DB=store
-POSTGRES_PASSWORD=Godis-4me
-POSTGRES_TEST_DB=store_test
-BCRYPT_PASSWORD=Godis-4me
-SALT_ROUNDS=10
-PEPPER=verySecurePassword
-JWT_TOKEN_SECRET=The-Best-Underscore-Developer-Super-Secret-Json-Web-Token
+
+MYSQL_PORT=3306
+MYSQL_USER=root
+MYSQL_DEV_DB=contacts
+MYSQL_PASSWORD=Godis-4me
+MYSQL_TEST_DB=contacts_test
+API_KEY=<Your Api Key from the CRM>
 
 ```
 
-Next, start the Postgres server in your terminal:
+Next, start the Mysql server in your terminal:
 
-# Login to Postgres
+# Login to Mysql
 
-`psql -U postgres`
+`mysql -u root -p`
 enter the password when it prompts for a password
 
 ##### This will list out all the databases
 
-\l
+show databases;
 
-# If "store" database is not present
+# If "contacts" database is not present
 
-create database store;
+create database contacts;
 
 ````
 
