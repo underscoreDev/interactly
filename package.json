@@ -8,7 +8,7 @@
     "create:db": "db-migrate db:create contacts",
     "prettier": "prettier --config .prettierrc \"src/**/*.ts\" --write",
     "dev": "tsc-watch --noClear -p tsconfig.json --onSuccess \"node ./build/server.js\"",
-    "test": "set ENV=test && db-migrate db:create contacts_test && db-migrate --env test up && jasmine && db-migrate db:drop contacts_test"
+    "test": "set NODE_ENV=test && db-migrate db:create contacts_test && db-migrate --env test up && jasmine && db-migrate db:drop contacts_test"
   },
   "keywords": [
     "Typescript",
