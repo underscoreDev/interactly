@@ -92,7 +92,7 @@ db-migrate up
 Use the following command to run the application in watch mode:
 
 ```bash
-yarn dev
+npm run dev
 ```
 
 The application will run on http://localhost:8989/.
@@ -102,7 +102,7 @@ The application will run on http://localhost:8989/.
 Use the following command to run the unit tests:
 
 ```bash
-yarn test
+npm run test
 ```
 
 ## Built With
