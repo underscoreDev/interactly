@@ -24,9 +24,11 @@ purposes.
 - jasmine and supertest for unit/integration testing
 
 ### Clone the repo
+```bash
 
-`git clone https://github.com/underscoreDev/interactly`
+git clone https://github.com/underscoreDev/interactly
 
+```
 ### Install dependencies
 
 `npm install`
