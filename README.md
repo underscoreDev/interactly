@@ -65,8 +65,11 @@ API_KEY=<Your Api Key from the CRM>
 Next, start the Mysql server in your terminal:
 
 # Login to Mysql
+```bash
+mysql -u root -p
+````
 
-`mysql -u root -p`
+
 enter the password when it prompts for a password
 ```bash
 
