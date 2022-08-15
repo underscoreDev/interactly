@@ -25,7 +25,7 @@ purposes.
 
 ### Clone the repo
 
-`git clone https://github.com/underscoreDev/e-commerce-api.git`
+`git clone https://github.com/underscoreDev/interactly`
 
 ### Install dependencies
 
