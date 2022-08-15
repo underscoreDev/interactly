@@ -1,4 +1,4 @@
-# CONTACTS API interactly.video Backend Developer TASK
+# interactly.video Backend Developer TASK
 
 # Project Title
 
@@ -31,8 +31,11 @@ git clone https://github.com/underscoreDev/interactly
 ```
 ### Install dependencies
 
-`npm install`
+```bash
 
+npm install
+
+````
 <!-- ### Starting the server
 
 `npm run dev`
